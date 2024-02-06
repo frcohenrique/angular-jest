@@ -14,6 +14,7 @@ import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { provideAuth, getAuth } from '@angular/fire/auth';
 import { DataService } from './services/data.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FirebaseService } from './services/firebase.service';
 @NgModule({
   declarations: [AppComponent],
   imports: [
@@ -28,7 +29,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     provideAuth(() => getAuth()),
     BrowserAnimationsModule,
   ],
-  providers: [DataService],
+  providers: [DataService, FirebaseService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
