@@ -1,0 +1,24 @@
+<ng-container *ngIf="users">
+  <div class="table-container">
+    <div class="table-header">
+      <div class="table-header-cell">Id</div>
+      <div class="table-header-cell">Nome</div>
+      <div class="table-header-cell">Sobrenome</div>
+      <div class="table-header-cell">Email</div>
+      <div class="table-header-cell">País</div>
+      <div class="table-header-cell">Estado</div>
+    </div>
+    <ng-container *ngFor="let user of users">
+      <div class="table-row">
+        <div class="table-cell">
+          {{ user.id }}
+        </div>
+        <div class="table-cell">{{ user.name }}</div>
+        <div class="table-cell">{{ user.surname }}</div>
+        <div class="table-cell">{{ user.email }}</div>
+        <div class="table-cell">{{ user.country }}</div>
+        <div class="table-cell">{{ user.state }}</div>
+      </div>
+    </ng-container>
+  </div>
+</ng-container>
