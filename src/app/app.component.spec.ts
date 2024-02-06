@@ -1,13 +1,20 @@
+import { TestBed, ComponentFixture } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 
 describe('AppComponent', () => {
-  let fixture: AppComponent;
+  let fixture: ComponentFixture<AppComponent>;
+  let component: AppComponent;
 
-  beforeEach(() => {
-    fixture = new AppComponent();
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      declarations: [AppComponent],
+    }).compileComponents();
+
+    fixture = TestBed.createComponent(AppComponent);
+    component = fixture.componentInstance;
   });
 
-  it('should have a title angularUnitTesting', () => {
-    expect(fixture.title).toEqual('angularUnitTesting');
+  it('should create the app', () => {
+    expect(component).toBeTruthy();
   });
 });
